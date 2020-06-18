@@ -11,7 +11,7 @@ function filmElements() {
                 window.location = "./details.html?title=" + search.Title;
             });
             makeFilms("h3", `Title: ${search.Title}`, searchDiv, "card-title w-50 p-5");
-           
+            
             const myImg = document.createElement("img");
             myImg.src = search.Poster;
             searchDiv.appendChild(myImg);
