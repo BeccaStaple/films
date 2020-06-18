@@ -1,12 +1,14 @@
 
 
 (function () {
-    const params = new URLSearchParams(window.location.Search);
+ 
+    const params = new URLSearchParams(window.location.search);
     
-    fetch("http://www.omdbapi.com/?apikey=c9f55179&s=" + params.get("Title"))
+    fetch("http://www.omdbapi.com/?apikey=c9f55179&i=" + params.get("id"))
     .then(res => res.json())
-    .then(json => {
-            const film = json.Search;
+    .then(film => {
+
+
             const filmOut = document.getElementById("filmOutputDiv");
             const searchDiv = makeFilms("div", "", filmOut, "card w-50 border border-warning m-5");
             makeFilms("h3", `Title: ${film.Title}`, searchDiv, "card-title w-50 p-5");
