@@ -3,7 +3,7 @@
 (function () {
     const params = new URLSearchParams(window.location.Search);
     
-    fetch("http://www.omdbapi.com/?apikey=c9f55179&s=" + params.get("Title"))
+    fetch("http://www.omdbapi.com/?apikey=c9f55179&s=" + params.get("imdbID"))
     .then(res => res.json())
     .then(json => {
             const film = json.Search;
