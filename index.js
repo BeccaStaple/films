@@ -8,7 +8,7 @@ function filmElements() {
             const filmOut = document.getElementById("filmOutputDiv");
             const searchDiv = makeFilms("div", "", filmOut, "card w-50 border border-warning m-5");
             filmOut.addEventListener("click", function () {
-                window.location = "./details.html?title=" + search.Title;
+                window.location = "./details.html?id=" + search.imdbID;
             });
             makeFilms("h3", `Title: ${search.Title}`, searchDiv, "card-title w-50 p-5");
             
